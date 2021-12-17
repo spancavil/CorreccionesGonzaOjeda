@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function CustomButton({ textButton, disabled, handleClick }) {
+export default function CustomButton({ textButton, disabled = false, handleClick }) {
   return (
     <>
       <button

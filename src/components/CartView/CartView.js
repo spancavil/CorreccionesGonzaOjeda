@@ -21,7 +21,7 @@ const CartView = () => {
 
                   <CustomButton
                     textButton={"Ir a Comprar"}
-                    onClick={() => push("/nuestrosProductos")}
+                    handleClick={() => push("/nuestrosProductos")}
                     />
                     
                 </>
@@ -39,7 +39,7 @@ const CartView = () => {
                         
                     <CustomButton
                             textButton={"Vaciar Carrito"}
-                            onClick={()=>emptyCart()}
+                            handleClick={()=>emptyCart()}
                         />
                         
                     <CustomButton
