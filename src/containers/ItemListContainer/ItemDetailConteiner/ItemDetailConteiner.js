@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from 'react'
 import { useParams } from 'react-router-dom'
-import ItemDetail from '../../components/ItemDetail/ItemDetail'
-import Loader from '../../components/Loader/Loader'
+import Loader from '../../../components/Loader/Loader'
 import { doc, getDoc } from 'firebase/firestore/lite'
-import { db } from '../../firebase/config'
+import { db } from '../../../firebase/config'
+import ItemDetail from '../../../components/ItemDetail/ItemDetail';
 
 const ItemDetailContainer = () => {
 
@@ -36,12 +36,15 @@ const ItemDetailContainer = () => {
 
 
     return (
-        loading ?
+        <>
+        {loading ?
             <Loader textLoader={ "Cargando..." }/>
             :
             <div className="item-detail-container d-flex justify-content-center">
                 <ItemDetail {...productDetail} />
             </div>
+        }
+        </>
     )
 }
 

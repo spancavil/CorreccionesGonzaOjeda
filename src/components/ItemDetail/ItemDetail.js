@@ -65,7 +65,7 @@ const ItemDetail = ({
                 <>
                   <CustomButton
                     textButton={"Finalizar Compra"}
-                    onClick={() => push("/cart")}
+                    handleClick={() => push("/cart")}
                   />
                 </>
               ) : (
@@ -80,8 +80,8 @@ const ItemDetail = ({
 
                   <CustomButton
                     textButton={"Agregar al Carrito"}
-                    onClick={handleAdd}
-                    disabled={setQuantity > stock}
+                    handleClick={handleAdd}
+                    disabled={quantity > stock}
                   />
                 </>
               )}
@@ -89,10 +89,10 @@ const ItemDetail = ({
               <p className="product-stock mt-1">
                 Stock disponible: {stock} unidades
               </p>
-              <CustomButton textButton={"Volver"} onClick={() => goBack()} />
+              <CustomButton textButton={"Volver"} handleClick={() => goBack()} />
               <CustomButton
                 textButton={"Volver al inicio"}
-                onClick={() => push("/")}
+                handleClick = {() => push("/")}
               />
             </div>
           </div>

@@ -19,7 +19,7 @@ export default function ItemCount({ quantity, modifyQuantity, stock}) {
     <div className="m-1 d-flex justify-content-start align-items-center item-count-container">
       <CustomButton
         textButton={"-"}
-        onClick={onDecrement}
+        handleClick={onDecrement}
         disabled={quantity ===1}
       />
 
@@ -27,7 +27,7 @@ export default function ItemCount({ quantity, modifyQuantity, stock}) {
 
       <CustomButton
         textButton={"+"}
-        onClick={onIncrement}
+        handleClick={onIncrement}
         disabled={quantity === stock}
       />
     </div>

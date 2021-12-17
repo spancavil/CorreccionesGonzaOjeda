@@ -10,7 +10,7 @@ const CartItem = ({ id, name, img, presentation, price, quantity, stock }) => {
   return (
     <div className="cart-item-container">
       <div className="cart-item-container-details">
-        <FontAwesomeIcon className="trash-product" icon={faGratipay} />
+        <FontAwesomeIcon className="trash-product" icon={faGratipay} /> 
         <h3 className="cart-item cart-item-strong mx-2">{name}</h3>
       </div>
 
